@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: lexend_deca;
+    src: url(../LexendDeca-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: big_shoulders;
+    src: url(../BigShouldersDisplay-VariableFont_wght.ttf);
+}
+
+html{
+    --white:hsl(0, 0%, 100%);
+    --orange:hsl(31, 77%, 52%);
+    --cyan:hsl(184, 100%, 22%);
+    --dark-cyan:hsl(179, 100%, 13%);
+}   
+body{
+    
+    font-family: lexend_deca;
+    color: white;
+    line-height: 2rem;
+    
+}
+a, a:hover, a:visited, a:focus{
+    text-decoration: none;
+}
+h1{
+    font-family: big_shoulders;
+    text-transform: uppercase;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+    padding: 2.5rem;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+}
+@media(min-width: 1280px){
+    body{
+        display: flex;
+        justify-content: center;
+        padding: 5rem;
+    }
+    .cards{
+        display: flex;
+        flex-direction: row;
+        max-width: 950px;
+        
+    }
+    .sedans__card {
+        border:  var(--white);
+        border-radius: 1rem 0 0 1rem;
+    }
+    .sedans__card a:hover{
+        border: 1px solid var(--white);
+        color: var(--white);
+        background-color: var(--orange);
+    }
+    .suvs__card a:hover{
+        border: 1px solid var(--white);
+        color: var(--white);
+        background-color: var(--cyan);
+    }
+    .luxury__card a:hover{
+        border: 1px solid var(--white);
+        color: var(--white);
+        background-color: var(--dark-cyan);
+    }
+    .luxury__card {
+        border-radius: 0 1rem 1rem 0;
+    }
+    
+}
+.btn{
+    text-decoration: none;
+    padding: 0.7rem 1.7rem;
+    border-radius: 500000000rem;
+    background-color: var(--white);
+}
+.sedans__card {
+    background-color: var(--orange);
+}
+
+.sedans__card a{
+    color: var(--orange);
+}
+
+.suvs__card {
+    background-color: var(--cyan);
+    
+}
+.suvs__card a{
+    color: var(--cyan);
+}
+.luxury__card {
+    background-color: var(--dark-cyan);
+}
+.luxury__card a{
+    color: var(--dark-cyan);
+}
+@media (max-width: 750px) {
+    .luxury__card {
+        border-radius: 0 0 1rem 1rem;
+    }
+}
